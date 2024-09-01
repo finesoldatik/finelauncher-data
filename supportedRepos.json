@@ -1,0 +1,57 @@
+{
+	"data": [
+		{
+			"name": "Voxel Engine",
+			"icon": "res/ve.png",
+			"owner": "MihailRis",
+			"repository": "VoxelEngine-Cpp",
+			"releases": [],
+			"buildCommands": {
+				"linux": [
+					"mkdir -p build",
+					"@build cmake -DCMAKE_BUILD_TYPE=Release ..",
+					"@build cmake --build .",
+					"build/VoxelEngine"
+				],
+				"win32": [
+					"!mkdir build",
+					"@build cmake -DCMAKE_BUILD_TYPE=Release -DVOXELENGINE_BUILD_WINDOWS_VCPKG=ON ..",
+					"@build cmake --build . --config Release",
+					"build/Release/VoxelEngine.exe"
+				]
+			}
+		},
+		{
+			"name": "Voxel Engine DEBRIS",
+			"icon": "res/debris.jpg",
+			"owner": "R0STUS",
+			"repository": "Voxel-Engine_DEBRIS",
+			"releases": [],
+			"buildCommands": {
+				"linux": [
+					"mkdir -p build",
+					"@build cmake -DCMAKE_BUILD_TYPE=Release ..",
+					"@build cmake --build .",
+					"build/VoxelEngine"
+				],
+				"win32": [
+					"!mkdir build",
+					"@build cmake -DCMAKE_BUILD_TYPE=Release -DVOXELENGINE_BUILD_WINDOWS_VCPKG=ON ..",
+					"@build cmake --build . --config Release",
+					"build/Release/VoxelEngine.exe"
+				]
+			}
+		},
+		{
+			"name": "Rusty Voxel Engine",
+			"icon": "res/rve.png",
+			"owner": "wampal",
+			"repository": "RustyVoxelEngine",
+			"releases": [],
+			"buildCommands": {
+				"linux": ["cargo build --release", "target/release/voxel_engine"],
+				"win32": ["cargo build --release", "target/release/voxel_engine.exe"]
+			}
+		}
+	]
+}
